@@ -14,8 +14,10 @@ app.get('/article-1',function (req, res){
     
 });
 app.get('/article-2',function (req, res){
-    res.send("Article two is requested an will be served here.")
+     res.sendFile(path.join(__dirname, 'ui', 'article-2.html')
+
 });
+     
 app.get('/article-3',function (req, res){
     res.send("Article three is requested an will be served here.")
 });
