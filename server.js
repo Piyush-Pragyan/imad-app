@@ -9,9 +9,9 @@ app.use(morgan('combined'));
 
 
 var articleTwo  = {
-    title: "Articel two| Piyush Pragyan",
-    heading: "Article 2",
-    date: "Sept,2,2016",
+    title: 'Articel two| Piyush Pragyan',
+    heading: 'Article 2',
+    date: 'Sept,2,2016',
     content: `<p>
                 This is Ariticle 2.This is Ariticle 2.This is Ariticle 2.This is Ariticle 2.This is Ariticle 2.This is Ariticle 2.This is Ariticle 2.This is Ariticle 2.This is Ariticle 2.This is Ariticle 2.This is Ariticle 2.
             </p>
