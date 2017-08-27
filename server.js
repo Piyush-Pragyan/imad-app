@@ -70,6 +70,10 @@ app.get('/article-1',function (req, res){
     res.sendFile(path.join(__dirname, 'ui', 'article-1.html'));
     
 });
+app.get('/article-4',function (req, res){
+    res.sendFile(path.join(__dirname, 'ui', 'article-4.html'));
+    
+});
 app.get('/article-2',function (req, res){
      res.send(createTemplate(articleTwo));
 
