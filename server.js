@@ -1,6 +1,7 @@
 var express = require('express');
 var morgan = require('morgan');
 var path = require('path');
+var crypto = require('crypyo');
 
 var app = express();
 app.use(morgan('combined'));
@@ -24,7 +25,17 @@ var articleTwo  = {
                 This is Ariticle 2.This is Ariticle 2.This is Ariticle 2.This is Ariticle 2.This is Ariticle 2.This is Ariticle 2.This is Ariticle 2.This is Ariticle 2.This is Ariticle 2.This is Ariticle 2.This is Ariticle 2.
             </p>`
 };
-
+  function hash(input,salt)
+  {
+      var hashed = crypto.pbkdf2Sync(input,salt,10000,512,sha512);
+      return hashed;
+  }
+  
+  
+  app.get('/hash/:input',function(req,res){
+      var hsahedstring  = hash(req.params.input,'This is some Random String');
+      res.send(hashedstring);
+  });
 
 function createTemplate(data) {
     var title = data.title;
